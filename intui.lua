@@ -83,7 +83,6 @@ end)
 
 createButton("Execute", UDim2.new(0, 10, 1, -45), function()
 	local code = textBox.Text
-	print("[Pipe Write Simulation] Sending Code:")
 	print(code)
 
 
