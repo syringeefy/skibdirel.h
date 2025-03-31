@@ -27,7 +27,7 @@ frame.Parent = screenGui
 local titleBar = Instance.new("TextLabel")
 titleBar.Size = UDim2.new(1, 0, 0, 30)
 titleBar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-titleBar.Text = "Lua Executor"
+titleBar.Text = "Strive"
 titleBar.TextColor3 = Color3.fromRGB(255, 255, 255)
 titleBar.Font = Enum.Font.GothamSemibold
 titleBar.TextSize = 18
@@ -82,15 +82,17 @@ createButton("Clear", UDim2.new(0, 120, 1, -45), function()
 end)
 
 createButton("Execute", UDim2.new(0, 10, 1, -45), function()
-	local code = textBox.Text
-	print(code)
+    local code = textBox.Text 
 
 
-	pcall(function()
-		local f = loadstring(code)
-		if f then f() end
-	end)
+    pcall(function()
+        local f = loadstring(code)  
+        if f then 
+            f()  
+        end
+    end)
 end)
+
 
 for _, obj in ipairs({frame, textBox}) do
 	local corner = Instance.new("UICorner")
